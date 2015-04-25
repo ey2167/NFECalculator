@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * Elohe Yonas
+ * CSC201
+ *
+ */
 public class FeCalculator {
 protected int strength;	
 protected  int skill;
