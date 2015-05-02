@@ -21,9 +21,6 @@ protected int critavoid;
 protected int res;
 
 FeCalculator(){
-
-
-	
 }
 
 public int getStrength() {

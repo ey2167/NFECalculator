@@ -4,13 +4,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
+/**
+ * 
+ * @author Owner
+ *
+ */
 
 public class NFEGui extends JFrame {
 	/**
@@ -21,7 +27,9 @@ public class NFEGui extends JFrame {
 	private JTextField[] textstats = new JTextField[7];
 	private JButton[] stathelp = new JButton[7];
 	private JButton calc;
-	
+	/**
+	 * 
+	 */
 	NFEGui(){
 		/**
 		 * calling the FeCalculator class into the new object calculate
@@ -116,6 +124,7 @@ public class NFEGui extends JFrame {
 				  * try/catch on actionperformed so that instructions will be given should someone mess with the inputs
 				  */
 				 try{
+					 
 				 FeCalculator calculate = new FeCalculator();
 				/**
 				 * create String that will read textstats' JTextField inputs
@@ -172,6 +181,15 @@ public class NFEGui extends JFrame {
 				  int critavoid = calculate.getCritavoid();
 				  calculate.setCritavoid(Luck);
 				  
+				  PrintWriter pw = new PrintWriter(new FileWriter("Stats.txt"));
+					pw.println(calculate.atk);
+					pw.println(calculate.def);
+					pw.println(calculate.res);
+					pw.println(calculate.hit);
+					pw.println(calculate.avoid);
+					pw.println(calculate.crit);
+					pw.println(calculate.critavoid);
+					pw.close();
 				/**
 				 * have the results shown to the user 
 				 */

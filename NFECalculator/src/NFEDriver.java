@@ -1,6 +1,13 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
 
 public class NFEDriver {
-	public static void main(String[]args){
+	public static void main(String[]args)throws FileNotFoundException{
+		
 	/**
 	 * Calculator is now created 
 	 */
@@ -17,5 +24,6 @@ calculator.setVisible(true);
  * setting the size of the Calculator
  */
 calculator.setSize(300,300);
+
 }
 }
